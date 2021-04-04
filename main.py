@@ -13,16 +13,7 @@ app = FastAPI()
 
 @app.get("/news")
 def get_news():
-    news = []
-
-    for n in google_news.get():
-        news.append(
-                Item(
-                    title=n["title"],
-                    link=n["url"],
-                    guid=GUID(content=n["title"])
-                )
-        )
+    news = [Item(title=n["title"], link=n["url"], guid=GUID(content=n["title"])) for n in google_news.get()]
 
     feed_data = {
         'title': 'Google news',
