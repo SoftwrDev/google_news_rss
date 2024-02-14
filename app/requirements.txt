@@ -1,5 +1,5 @@
 bs4==0.0.1
-fastapi==0.63.0
+fastapi==0.109.1
 fastapi-rss==0.1.3
 requests==2.25.1
 uvicorn==0.13.4
